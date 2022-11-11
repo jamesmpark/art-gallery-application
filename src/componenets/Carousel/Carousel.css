@@ -1,0 +1,15 @@
+main {
+  flex-grow: 1;
+}
+
+main > article {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr 1fr;
+}
+
+main > article > .article-section {
+  height: 100%;
+  border: 1px solid var(--border-color);
+}

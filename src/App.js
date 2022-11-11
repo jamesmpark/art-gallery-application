@@ -1,10 +1,12 @@
-import "./App.css";
-import Navigation from "./componenets/Navigation/Navigation";
+import './App.css';
+import Navigation from './componenets/Navigation/Navigation';
+import Carousel from './componenets/Carousel/Carousel';
 
 function App() {
   return (
     <div className="App">
-      <Navigation></Navigation>
+      <Navigation />
+      <Carousel />
     </div>
   );
 }
