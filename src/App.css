@@ -1,0 +1,43 @@
+:root {
+  --background-color: rgb(22, 22, 22);
+  --border-color: rgb(255, 255, 255, 0.1);
+  --highlight-color: rgb(126, 87, 194);
+  --yt-color: rgb(229, 57, 53);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+a,
+p,
+span {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: var(--highlight-color);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
