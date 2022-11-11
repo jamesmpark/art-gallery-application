@@ -2,6 +2,10 @@ import './Navigation.css';
 import { social } from '../../data.js';
 
 const Navigation = () => {
+  const handleNavToggle = () => {
+    console.log('button');
+  };
+
   return (
     <>
       <nav>
@@ -9,12 +13,12 @@ const Navigation = () => {
           <h2 className="logo">James Park</h2>
         </div>
         <div id="nav-mobile-section">
-          <div className="nav-section links-container">
+          <div id="nav-link-section" className="nav-section">
             <a href="#">ABOUT</a>
             <a href="#">WORK</a>
             <a href="#">ARCHIVE</a>
           </div>
-          <div className="social-container nav-section">
+          <div id="nav-social-section" className="nav-section">
             <ul className="social-icons">
               {social.map(socials => {
                 const { id, url, icon } = socials;
@@ -26,12 +30,20 @@ const Navigation = () => {
               })}
             </ul>
           </div>
+          <div id="nav-contact-section" className="nav-section">
+            <a className="contact" href="#">
+              GET IN TOUCH
+            </a>
+          </div>
         </div>
-        <div className="nav-contact nav-section">
-          <a className="contact" href="#">
-            GET IN TOUCH
-          </a>
-        </div>
+        <button
+          id="nav-toggle-button"
+          type="button"
+          onClick={handleNavToggle()}
+        >
+          <span>Menu</span>
+          <i className="fa-solid fa-bars"></i>
+        </button>
       </nav>
     </>
   );
