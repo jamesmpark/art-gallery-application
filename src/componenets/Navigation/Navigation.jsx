@@ -5,27 +5,32 @@ const Navigation = () => {
   return (
     <>
       <nav>
-        <div class="nav-section">
-          <h2>James Park</h2>
+        <div id="nav-logo-section" className="nav-section">
+          <h2 className="logo">James Park</h2>
         </div>
-        <div class="nav-section nav-link-section">
-          <a href="#">ABOUT</a>
-          <a href="#">WORK</a>
-        </div>
-        <div class="nav-section nav-social-section">
-          <ul className="social-icons">
-            {social.map(socials => {
-              const { id, url, icon } = socials;
-              return (
-                <li key={id}>
-                  <a href={url}>{icon}</a>
-                </li>
-              );
-            })}
-          </ul>
+        <div id="nav-mobile-section">
+          <div className="nav-section links-container">
+            <a href="#">ABOUT</a>
+            <a href="#">WORK</a>
+            <a href="#">ARCHIVE</a>
+          </div>
+          <div className="social-container nav-section">
+            <ul className="social-icons">
+              {social.map(socials => {
+                const { id, url, icon } = socials;
+                return (
+                  <li key={id}>
+                    <a href={url}>{icon}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
         <div className="nav-contact nav-section">
-          <a href="#">GET IN TOUCH</a>
+          <a className="contact" href="#">
+            GET IN TOUCH
+          </a>
         </div>
       </nav>
     </>

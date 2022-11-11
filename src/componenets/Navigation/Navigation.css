@@ -1,20 +1,39 @@
 nav {
   display: flex;
   width: 100%;
-  gap: 1rem;
-  border-bottom: 1px solid(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav .nav-section {
   padding: 3rem 2rem;
   display: flex;
-  gap: 1rem;
   border-left: 1px solid var(--border-color);
   align-items: center;
   justify-content: center;
 }
 
-.nav-link-section,
-.nav-social-section {
+.links-container {
+  flex-basis: 50%;
+  gap: 4rem;
+}
+
+#nav-logo-section {
+  flex-basis: calc(100% / 3);
+  justify-content: flex-start;
+}
+
+#nav-mobile-section {
+  display: flex;
+  flex-basis: calc(100% * (2 / 3));
+  z-index: 2;
+}
+
+.social-container,
+.nav-contact {
   flex-grow: 1;
+}
+
+.social-icons {
+  gap: 4em;
+  font-size: larger;
 }
