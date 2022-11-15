@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import './Carousel.css';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { artData } from '../../data';
