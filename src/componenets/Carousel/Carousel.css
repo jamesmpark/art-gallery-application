@@ -15,7 +15,6 @@ main > article {
 main > article > .article-section {
   height: 100%;
   display: flex;
-  border: 1px solid var(--border-color);
 }
 
 main > article > .article-description-section,
@@ -82,19 +81,6 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
 }
 
 @media (max-width: 1200px) {
-  #nav-mobile-section {
-    flex-basis: calc(100% * 0.75);
-  }
-
-  #nav-logo-section {
-    flex-basis: calc(100% * 0.25);
-  }
-
-  #nav-link-section {
-    flex-basis: calc(100% / 3);
-    gap: 3rem;
-  }
-
   main {
     overflow-y: auto;
   }

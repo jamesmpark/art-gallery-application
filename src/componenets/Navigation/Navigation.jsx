@@ -10,7 +10,7 @@ const Navigation = () => {
     <>
       <nav>
         <div id="nav-logo-section" className="nav-section">
-          <h2 className="logo">James Park</h2>
+          <h1 className="logo">JP</h1>
         </div>
         <div id="nav-mobile-section">
           <div id="nav-link-section" className="nav-section">
