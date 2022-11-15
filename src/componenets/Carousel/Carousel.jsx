@@ -1,6 +1,15 @@
 import './Carousel.css';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const Carousel = () => {
+  const handleLeftClick = () => {
+    console.log('left button clicked');
+  };
+
+  const handleRighClick = () => {
+    console.log('right button clicked');
+  };
+
   return (
     <main>
       <article>
@@ -14,12 +23,22 @@ const Carousel = () => {
           <h2>title</h2>
         </div>
         <div className="article-nav-section article-section">
-          <h2>nav buttons</h2>
+          <button
+            className="article-nav-button"
+            type="button"
+            onClick={handleLeftClick}
+          >
+            <FaArrowLeft />
+          </button>
+          <button
+            className="article-nav-button"
+            type="button"
+            onClick={handleRighClick}
+          >
+            <FaArrowRight />
+          </button>
         </div>
       </article>
-      <article></article>
-      <article></article>
-      <article></article>
     </main>
   );
 };
