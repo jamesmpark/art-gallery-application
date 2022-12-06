@@ -16,6 +16,7 @@ nav .nav-section {
   justify-content: center;
 }
 
+/* Nav-mobile-section will take up 2/3s of width  */
 #nav-mobile-section {
   display: flex;
   flex-basis: calc(100% * (2 / 3));
@@ -56,6 +57,7 @@ nav .nav-section {
   flex-grow: 1;
 }
 
+/* nav-logo section will take up 1/3 of the width */
 #nav-logo-section {
   flex-basis: calc(100% / 3);
   justify-content: flex-start;

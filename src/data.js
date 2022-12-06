@@ -32,7 +32,7 @@ export const artData = [
     image: 'https://i.imgur.com/MnVbMbo.jpg',
     title: 'Fast Working Enviornment',
     description:
-      "Employees who work in this type of workplace often juggle multiple projects or tasks at once and be prepared to take on something new with only a moment's notice",
+      "Employees who work in this type of workplace often juggle multiple projects or tasks at once and are prepared to take on something new with only a moment's notice",
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ export const artData = [
     id: 6,
     image: 'https://i.imgur.com/8H1JNqp.jpg',
     title: 'Window study',
-    description: '5 minute sketches',
+    description: '5 minute sketch',
   },
   {
     id: 7,
@@ -73,7 +73,7 @@ export const artData = [
   },
   {
     id: 9,
-    image: 'https://imgur.com/6xqPLC0',
+    image: 'https://i.imgur.com/6xqPLC0.jpg',
     title: 'Untitled',
     description:
       '"He was forty-two years old, and he could see nothing before him that he wished to enjoy and little behind him that he cared to remember." -John Williams, Stoner',

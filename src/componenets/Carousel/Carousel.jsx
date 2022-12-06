@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import './Carousel.css';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { artData } from '../../data';
+import './Carousel.css';
 
 const Carousel = () => {
   const [art, setArt] = useState(artData);
@@ -19,43 +19,54 @@ const Carousel = () => {
     }
   }, [index, art]);
 
-  const handleLeftClick = () => {
-    console.log('left button clicked');
-  };
-
-  const handleRighClick = () => {
-    console.log('right button clicked');
-  };
-
   return (
     <main>
-      <article>
-        <div className="article-image-section article-section">
-          <h2>image section</h2>
-        </div>
-        <div className="article-description-section article-section">
-          <h2>desc</h2>
-        </div>
-        <div className="article-title-section article-section">
-          <h2>title</h2>
-        </div>
-        <div className="article-nav-section article-section">
-          <button
-            className="article-nav-button"
-            type="button"
-            onClick={handleLeftClick}
-          >
-            <FaArrowLeft />
-          </button>
-          <button
-            className="article-nav-button"
-            type="button"
-            onClick={handleRighClick}
-          >
-            <FaArrowRight />
-          </button>
-        </div>
-      </article>
+      {art.map((artItem, artIndex) => {
+        let position = 'nextSlide';
+        if (artIndex === index) {
+          position = 'activeSlide';
+        }
+        if (
+          artIndex === index - 1 ||
+          (index === 0 && artIndex === art.length - 1)
+        ) {
+          position = 'lastSlide';
+        }
+
+        const { id, image, title, description } = artItem;
+        return (
+          <>
+            <article className={position} key={id}>
+              <div className="article-image-section article-section">
+                <img src={image} alt={title} className="art-img" />
+              </div>
+              <div className="article-description-section article-section">
+                <h2>{description}</h2>
+              </div>
+              <div className="article-title-section article-section">
+                <h1>{title}</h1>
+              </div>
+              {/* button group */}
+              <div className="article-nav-section article-section">
+                <button
+                  className="article-nav-button"
+                  type="prev button"
+                  onClick={() => setIndex(index - 1)}
+                >
+                  <FaArrowLeft />
+                </button>
+                <button
+                  className="article-nav-button"
+                  type="next button"
+                  onClick={() => setIndex(index + 1)}
+                >
+                  <FaArrowRight />
+                </button>
+              </div>
+            </article>
+          </>
+        );
+      })}
     </main>
   );
 };

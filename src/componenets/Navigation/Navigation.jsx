@@ -15,8 +15,8 @@ const Navigation = () => {
         <div id="nav-mobile-section">
           <div id="nav-link-section" className="nav-section">
             <a href="#">ABOUT</a>
-            <a href="#">WORK</a>
             <a href="#">ARCHIVE</a>
+            <a href="#">SHOP</a>
           </div>
           <div id="nav-social-section" className="nav-section">
             <ul className="social-icons">

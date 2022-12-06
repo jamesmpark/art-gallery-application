@@ -32,6 +32,10 @@ main > article > .article-image-section {
   background-size: cover;
 }
 
+main > article > .article-image-section > .image-contianer {
+  object-fit: contain;
+}
+
 main > article > .article-description-section {
   flex-direction: column;
   justify-content: flex-end;
