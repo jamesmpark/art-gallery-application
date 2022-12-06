@@ -1,5 +1,15 @@
+:root {
+  --transition: all 0.3s linear;
+}
+
 main {
   flex-grow: 1;
+}
+
+img {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
 }
 
 main > article {
@@ -9,7 +19,18 @@ main > article {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 2fr 1fr;
   position: absolute;
-  transition: transform 400ms ease;
+  transition: var(--transition);
+}
+
+article.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+article.lastSlide {
+  transform: translateX(-100%);
+}
+article.nextSlide {
+  transform: translateX(100%);
 }
 
 main > article > .article-section {
@@ -28,17 +49,14 @@ main > article > .article-nav-section {
 }
 
 main > article > .article-image-section {
-  background-position: center;
-  background-size: cover;
-}
-
-main > article > .article-image-section > .image-contianer {
-  object-fit: contain;
+  display: flex;
+  justify-content: center;
 }
 
 main > article > .article-description-section {
+  text-align: center;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 4rem;
 }
 
@@ -52,9 +70,13 @@ main > article > .article-description-section > p > a:hover {
 }
 
 main > article > .article-title-section {
-  align-items: center;
-  justify-content: space-between;
+  align-items: baseline;
+  justify-content: center;
   padding: 2rem 4rem;
+}
+
+main > article > .article-title-section > h1 {
+  font-size: 3.5rem;
 }
 
 main > article > .article-title-section * {
@@ -74,6 +96,7 @@ main > article > .article-nav-section > .article-nav-button {
   color: rgba(255, 255, 255, 0.75);
   font-size: 3rem;
   cursor: pointer;
+  height: 100%;
 }
 
 main > article > .article-nav-section > .article-nav-button:hover {
@@ -82,6 +105,18 @@ main > article > .article-nav-section > .article-nav-button:hover {
 
 main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   border-left: 1px solid var(--border-color);
+}
+
+@media (max-width: 2560px) {
+  img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  main > article > .article-nav-section > .article-nav-button {
+    height: 75%;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -93,6 +128,16 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
     grid-template-columns: none;
     grid-template-rows: 1.5fr repeat(3, 0.75fr) 0.25fr;
     height: max(900px, 100%);
+  }
+  main > article > .article-title-section {
+    order: 2;
+    border-bottom: 1px solid var(--border-color);
+  }
+  main > article > .article-description-section {
+    order: 3;
+  }
+  main > article > .article-nav-section {
+    order: 4;
   }
 
   main > article > .article-title-section > h2 {
@@ -108,23 +153,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   main > article > .article-nav-section {
     border-left: none;
   }
-
-  main > article > .article-image-section {
-    order: 1;
-  }
-
-  main > article > .article-title-section {
-    border-bottom: 1px solid var(--border-color);
-    order: 2;
-  }
-
-  main > article > .article-description-section {
-    justify-content: center;
-    order: 3;
-  }
-
-  main > article > .article-nav-section {
-    border-bottom: 1px solid var(--border-color);
-    order: 4;
+  main > article > .article-nav-section > .article-nav-button {
+    height: 100%;
   }
 }

@@ -22,7 +22,7 @@ export const social = [
 export const artData = [
   {
     id: 1,
-    image: 'https://i.imgur.com/3mKZ6xp.jpg',
+    image: 'https://i.imgur.com/3mKZ6xpl.jpg',
     title: 'All Work and No Play',
     description:
       'A state of physical or emotional exhaution that also involves a sense of reduced accomplishment and loss of personal identity.',
@@ -36,46 +36,30 @@ export const artData = [
   },
   {
     id: 3,
-    image: 'https://i.imgur.com/8JI0Cee.jpg',
-    title: 'Plants',
-    description: 'No rain, no flowers',
-  },
-  {
-    id: 4,
     image: 'https://i.imgur.com/G9uVFFU.jpg',
     title: 'Capra Aegagrus Hircus',
     description:
-      'The goat or domestic goat (Capra hircus) is a domesticated species of goat-antelope typically kept as livestock.',
+      'The domestic goat (Capra hircus) is a domesticated species of goat-antelope typically kept as livestock.',
+  },
+  {
+    id: 4,
+    image: 'https://i.imgur.com/8H1JNqp.jpg',
+    title: 'Window study',
+    description:
+      '5 minute sketch - Mission Distric, San Francisco. Sometime between 2017 - 2019. Originally created with graphite and ink and transfered to digital',
   },
   {
     id: 5,
-    image: 'https://i.imgur.com/hWLHLO7.jpg',
-    title: 'Canis Lupus Familiaris',
-    description: "Man's best friend",
+    image: 'https://i.imgur.com/1oR0ExL.jpg',
+    title: 'Posture study',
+    description:
+      'Fill in the shapes with the right tones and the form takes care of itself - 5 minute ink',
   },
   {
     id: 6,
-    image: 'https://i.imgur.com/8H1JNqp.jpg',
-    title: 'Window study',
-    description: '5 minute sketch',
-  },
-  {
-    id: 7,
-    image: 'https://i.imgur.com/1oR0ExL.jpg',
-    title: 'Posture study',
-    description: '5 minute sketch',
-  },
-  {
-    id: 8,
     image: 'https://i.imgur.com/VA5vrzQ.jpg',
     title: 'Posture Study',
-    description: '2 minute sketch',
-  },
-  {
-    id: 9,
-    image: 'https://i.imgur.com/6xqPLC0.jpg',
-    title: 'Untitled',
     description:
-      '"He was forty-two years old, and he could see nothing before him that he wished to enjoy and little behind him that he cared to remember." -John Williams, Stoner',
+      'A head is not drawn until you can feel the unseen side - 3 minute countour sketch practice ',
   },
 ];
