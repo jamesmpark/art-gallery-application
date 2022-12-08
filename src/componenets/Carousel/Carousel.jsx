@@ -7,17 +7,41 @@ const Carousel = () => {
   const [art, setArt] = useState(artData);
   const [index, setIndex] = useState(0);
 
+  const nextSlide = () => {
+    setIndex(oldIndex => {
+      let index = oldIndex + 1;
+      if (index > art.length - 1) {
+        index = 0;
+      }
+      return index;
+    });
+  };
+
+  const prevSlide = () => {
+    setIndex(oldIndex => {
+      let index = oldIndex - 1;
+      if (index < 0) {
+        index = art.length - 1;
+      }
+      return index;
+    });
+  };
+
+  // autoplay functionality: after 6s, see the next slide
   useEffect(() => {
-    const lastIndex = art.length - 1;
-    // if art index is negative, setArt to the last index of the array
-    if (index < 0) {
-      setIndex(lastIndex);
-    }
-    // if index is greater than the lastIndex, setIndex to beginning
-    if (index > lastIndex) {
-      setIndex(0);
-    }
-  }, [index, art]);
+    let slider = setInterval(() => {
+      setIndex(oldIndex => {
+        let index = oldIndex + 1;
+        if (index > art.length - 1) {
+          index = 0;
+        }
+        return index;
+      });
+    }, 6000);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index]);
 
   return (
     <main>
@@ -32,7 +56,6 @@ const Carousel = () => {
         ) {
           position = 'lastSlide';
         }
-
         const { id, image, title, description } = artItem;
         return (
           <>
@@ -51,14 +74,14 @@ const Carousel = () => {
                 <button
                   className="article-nav-button"
                   type="prev button"
-                  onClick={() => setIndex(index - 1)}
+                  onClick={prevSlide}
                 >
                   <FaArrowLeft />
                 </button>
                 <button
                   className="article-nav-button"
                   type="next button"
-                  onClick={() => setIndex(index + 1)}
+                  onClick={nextSlide}
                 >
                   <FaArrowRight />
                 </button>

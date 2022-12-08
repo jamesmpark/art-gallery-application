@@ -19,6 +19,8 @@ main > article {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 2fr 1fr;
   position: absolute;
+  /* opacity at 0 will block slides from showing the transition */
+  opacity: 0;
   transition: var(--transition);
 }
 
