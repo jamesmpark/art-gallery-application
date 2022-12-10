@@ -127,6 +127,9 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
 
 /* Screen size at 1200px */
 @media (max-width: 1200px) {
+  img {
+    width: 65%;
+  }
   main {
     overflow-y: auto;
   }
@@ -139,9 +142,11 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   main > article > .article-title-section {
     order: 2;
     border-bottom: 1px solid var(--border-color);
+    padding: 1rem 2rem;
   }
   main > article > .article-description-section {
     order: 3;
+    padding: 1.5rem;
   }
   main > article > .article-nav-section {
     order: 4;
@@ -161,15 +166,13 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   main > article > .article-nav-section {
     border-left: none;
   }
-  main > article > .article-nav-section > .article-nav-button {
-    height: 100%;
+  main > article > .article-nav-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
 @media (max-width: 800px) {
-  h1 {
-    font-size: medium;
-  }
   img {
     width: 85%;
   }
@@ -204,5 +207,8 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
 
   main > article > .article-description-section > p {
     font-size: 0.8rem;
+  }
+  .btn-group {
+    padding: 1rem;
   }
 }
