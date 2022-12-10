@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { artData } from '../../data';
+import Button from '../Button/Button';
 import './Carousel.css';
 
 const Carousel = () => {
@@ -28,20 +29,20 @@ const Carousel = () => {
   };
 
   // autoplay functionality: after 6s, see the next slide
-  useEffect(() => {
-    let slider = setInterval(() => {
-      setIndex(oldIndex => {
-        let index = oldIndex + 1;
-        if (index > art.length - 1) {
-          index = 0;
-        }
-        return index;
-      });
-    }, 6000);
-    return () => {
-      clearInterval(slider);
-    };
-  }, [index]);
+  // useEffect(() => {
+  //   let slider = setInterval(() => {
+  //     setIndex(oldIndex => {
+  //       let index = oldIndex + 1;
+  //       if (index > art.length - 1) {
+  //         index = 0;
+  //       }
+  //       return index;
+  //     });
+  //   }, 6000);
+  //   return () => {
+  //     clearInterval(slider);
+  //   };
+  // }, [index]);
 
   return (
     <main>
@@ -69,22 +70,16 @@ const Carousel = () => {
               <div className="article-title-section article-section">
                 <h1>{title}</h1>
               </div>
-              {/* button group */}
               <div className="article-nav-section article-section">
-                <button
-                  className="article-nav-button"
-                  type="prev button"
-                  onClick={prevSlide}
-                >
-                  <FaArrowLeft />
-                </button>
-                <button
-                  className="article-nav-button"
-                  type="next button"
-                  onClick={nextSlide}
-                >
-                  <FaArrowRight />
-                </button>
+                {/* button group */}
+                <div className="btn-group">
+                  <Button type="prev button" onClick={prevSlide}>
+                    <FaArrowLeft />
+                  </Button>
+                  <Button type="next button" onClick={nextSlide}>
+                    <FaArrowRight />
+                  </Button>
+                </div>
               </div>
             </article>
           </>

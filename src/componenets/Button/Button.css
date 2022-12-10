@@ -1,0 +1,33 @@
+.btn {
+  font-weight: bold;
+  align-items: center;
+  background-color: rgb(238, 238, 238);
+  border: 3px solid #111;
+  border-radius: 8px;
+  padding: 8px;
+  letter-spacing: 1px;
+  min-height: 150px;
+  min-width: 150px;
+  box-shadow: 7px 7px 0px 1px rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font-size: 3rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.btn:hover {
+  background-color: #40f99c60;
+}
+
+.btn:active {
+  background-color: #40f99cc9;
+  box-shadow: 1.5px 1.5px 0px 1px rgb(0, 0, 0);
+  transform: translate(2px, 2px);
+}
+
+.project-btn {
+  margin-right: 15rem;
+}

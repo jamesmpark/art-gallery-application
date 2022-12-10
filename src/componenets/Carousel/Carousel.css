@@ -1,9 +1,5 @@
 :root {
-  --transition: all 0.3s linear;
-}
-
-main {
-  flex-grow: 1;
+  --transition: 0.3s linear;
 }
 
 img {
@@ -19,7 +15,7 @@ main > article {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 2fr 1fr;
   position: absolute;
-  /* opacity at 0 will block slides from showing the transition */
+  /* opacity at 0 will block nextSlide elemnts from showing the transition */
   opacity: 0;
   transition: var(--transition);
 }
@@ -38,6 +34,14 @@ article.nextSlide {
 main > article > .article-section {
   height: 100%;
   display: flex;
+}
+
+.btn-group {
+  padding-bottom: 7rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 main > article > .article-description-section,
@@ -59,7 +63,7 @@ main > article > .article-description-section {
   text-align: center;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem;
+  padding: 2.5rem;
 }
 
 main > article > .article-description-section > p {
@@ -81,10 +85,6 @@ main > article > .article-title-section > h1 {
   font-size: 3.5rem;
 }
 
-main > article > .article-title-section * {
-  color: white;
-}
-
 main > article > .article-title-section > i {
   color: rgba(255, 255, 255, 0.75);
   font-size: 4rem;
@@ -92,13 +92,11 @@ main > article > .article-title-section > i {
 
 main > article > .article-nav-section > .article-nav-button {
   background-color: transparent;
-  flex-grow: 1;
   border: none;
   outline: none;
   color: rgba(255, 255, 255, 0.75);
   font-size: 3rem;
   cursor: pointer;
-  height: 100%;
 }
 
 main > article > .article-nav-section > .article-nav-button:hover {
@@ -121,6 +119,13 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
 }
 
+@media (max-width: 1500px) {
+  img {
+    width: 70%;
+  }
+}
+
+/* Screen size at 1200px */
 @media (max-width: 1200px) {
   main {
     overflow-y: auto;
@@ -140,6 +145,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
   main > article > .article-nav-section {
     order: 4;
+    padding-top: 2rem;
   }
 
   main > article > .article-title-section > h2 {
@@ -157,5 +163,46 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
   main > article > .article-nav-section > .article-nav-button {
     height: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: medium;
+  }
+  img {
+    width: 85%;
+  }
+  nav {
+    justify-content: space-between;
+  }
+
+  nav .nav-section {
+    border-left: none;
+    padding: 1.5rem 1rem;
+  }
+
+  main > article {
+    grid-template-rows: 1fr repeat(4, 0.5fr);
+    height: max(700px, 100%);
+  }
+
+  main > article > .article > .article-title-section {
+    padding: 1rem;
+  }
+
+  main > article > .article-title-sectoin > h2 {
+    flex-basis: 70%;
+    font-size: 1.75em;
+    line-height: 1.5rem;
+  }
+
+  main > article > .article-description-section {
+    padding: 1rem;
+    font-size: small;
+  }
+
+  main > article > .article-description-section > p {
+    font-size: 0.8rem;
   }
 }
