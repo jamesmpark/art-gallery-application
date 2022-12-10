@@ -8,7 +8,7 @@ const Carousel = () => {
   const [art, setArt] = useState(artData);
   const [index, setIndex] = useState(0);
 
-  const nextSlide = () => {
+  const handleNextSlide = () => {
     setIndex(oldIndex => {
       let index = oldIndex + 1;
       if (index > art.length - 1) {
@@ -18,7 +18,7 @@ const Carousel = () => {
     });
   };
 
-  const prevSlide = () => {
+  const handlePrevSlide = () => {
     setIndex(oldIndex => {
       let index = oldIndex - 1;
       if (index < 0) {
@@ -27,6 +27,25 @@ const Carousel = () => {
       return index;
     });
   };
+
+  // Navigation with left/right arrow keys
+  useEffect(() => {
+    console.log('useEffect fired');
+
+    const handleUserKeyPress = e => {
+      if (e.key === 'ArrowLeft') {
+        handlePrevSlide();
+      }
+      if (e.key === 'ArrowRight') {
+        handleNextSlide();
+      }
+    };
+    window.addEventListener('keydown', handleUserKeyPress);
+    // clean up function
+    return () => {
+      window.removeEventListener('keydown', handleUserKeyPress);
+    };
+  }, [setArt]);
 
   // autoplay functionality: after 6s, see the next slide
   // useEffect(() => {
@@ -73,10 +92,10 @@ const Carousel = () => {
               <div className="article-nav-section article-section">
                 {/* button group */}
                 <div className="btn-group">
-                  <Button type="prev button" onClick={prevSlide}>
+                  <Button type="prev button" onClick={handlePrevSlide}>
                     <FaArrowLeft />
                   </Button>
-                  <Button type="next button" onClick={nextSlide}>
+                  <Button type="next button" onClick={handleNextSlide}>
                     <FaArrowRight />
                   </Button>
                 </div>
