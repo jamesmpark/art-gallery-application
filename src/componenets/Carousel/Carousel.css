@@ -142,7 +142,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   main > article > .article-title-section {
     order: 2;
     border-bottom: 1px solid var(--border-color);
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
   }
   main > article > .article-description-section {
     order: 3;
@@ -173,6 +173,9 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
 }
 
 @media (max-width: 800px) {
+  h1 {
+    font-size: medium;
+  }
   img {
     width: 85%;
   }
