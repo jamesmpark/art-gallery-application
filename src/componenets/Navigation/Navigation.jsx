@@ -1,6 +1,6 @@
 import './Navigation.css';
 import { social } from '../../data.js';
-
+import { Link, Outlet } from 'react-router-dom';
 const Navigation = () => {
   const handleNavToggle = () => {
     console.log('button');
@@ -10,11 +10,13 @@ const Navigation = () => {
     <>
       <nav>
         <div id="nav-logo-section" className="nav-section">
-          <h1 className="logo">James Park</h1>
+          <Link to="/">
+            <h1 className="logo">James Park</h1>
+          </Link>
         </div>
         <div id="nav-mobile-section">
           <div id="nav-link-section" className="nav-section">
-            <a href="#">ABOUT</a>
+            <a href="about">ABOUT</a>
             <a href="#">ARCHIVE</a>
             <a href="#">SHOP</a>
           </div>
@@ -45,6 +47,7 @@ const Navigation = () => {
           <i className="fa-solid fa-bars"></i>
         </button>
       </nav>
+      <Outlet />
     </>
   );
 };
