@@ -30,8 +30,6 @@ const Carousel = () => {
 
   // Navigation with left/right arrow keys
   useEffect(() => {
-    console.log('useEffect fired');
-
     const handleUserKeyPress = e => {
       if (e.key === 'ArrowLeft') {
         handlePrevSlide();
@@ -40,12 +38,15 @@ const Carousel = () => {
         handleNextSlide();
       }
     };
+    // listens for keydown events and calls handleUserKeyPress function
     window.addEventListener('keydown', handleUserKeyPress);
     // clean up function
     return () => {
       window.removeEventListener('keydown', handleUserKeyPress);
     };
   }, [setArt]);
+
+  // useRef to apply 'active' style on button when using left/right arrow keys
 
   // autoplay functionality: after 6s, see the next slide
   // useEffect(() => {

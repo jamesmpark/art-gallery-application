@@ -1,13 +1,13 @@
+import { Routes, Route } from 'react-router-dom';
+import Home from './Home/Home';
+
 import './App.css';
-import Navigation from './componenets/Navigation/Navigation';
-import Carousel from './componenets/Carousel/Carousel';
 
 function App() {
   return (
-    <div className="App">
-      <Navigation />
-      <Carousel />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 
