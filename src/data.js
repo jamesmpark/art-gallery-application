@@ -30,7 +30,7 @@ export const artData = [
   {
     id: 2,
     image: 'https://i.imgur.com/MnVbMbo.jpg',
-    title: 'Fast Working Enviornment',
+    title: 'Work Faster',
     description:
       "Employees who work in this type of workplace often juggle multiple projects or tasks at once and are prepared to take on something new with only a moment's notice",
   },

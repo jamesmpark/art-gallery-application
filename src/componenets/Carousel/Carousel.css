@@ -8,6 +8,10 @@ img {
   object-fit: contain;
 }
 
+p {
+  font-family: 'Rubik', sans-serif;
+}
+
 main > article {
   display: grid;
   height: 100%;
@@ -67,7 +71,7 @@ main > article > .article-description-section {
 }
 
 main > article > .article-description-section > p {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
   font-size: 1.25em;
 }
 
@@ -82,7 +86,7 @@ main > article > .article-title-section {
 }
 
 main > article > .article-title-section > h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 main > article > .article-title-section > i {
@@ -148,18 +152,23 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
     order: 3;
     padding: 1.5rem;
   }
+
+  main > article > .article-description-section > p {
+    width: 55%;
+    align-self: center;
+  }
   main > article > .article-nav-section {
     order: 4;
     padding-top: 2rem;
   }
 
   main > article > .article-title-section > h2 {
-    font-size: 3rem;
-    line-height: 2.6rem;
+    font-size: 2.5rem;
+    line-height: 2rem;
   }
 
   main > article > .article-title-section > i {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   main > article > .article-description-section,
@@ -209,7 +218,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
 
   main > article > .article-description-section > p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .btn-group {
     padding: 1rem;
