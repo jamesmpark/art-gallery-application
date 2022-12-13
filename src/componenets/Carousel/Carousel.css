@@ -48,6 +48,12 @@ main > article > .article-section {
   justify-content: space-around;
 }
 
+button[type='navButton'] {
+  min-height: 120px;
+  min-width: 120px;
+  font-size: 3rem;
+}
+
 main > article > .article-description-section,
 main > article > .article-nav-section {
   border-left: 1px solid var(--border-color);

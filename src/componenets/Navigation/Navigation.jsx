@@ -1,6 +1,8 @@
-import './Navigation.css';
+import Button from '../Button/Button';
 import { social } from '../../data.js';
 import { Link, Outlet } from 'react-router-dom';
+import './Navigation.css';
+
 const Navigation = () => {
   const handleNavToggle = () => {
     console.log('button');
@@ -17,8 +19,8 @@ const Navigation = () => {
         <div id="nav-mobile-section">
           <div id="nav-link-section" className="nav-section">
             <a href="about">ABOUT</a>
-            <a href="#">ARCHIVE</a>
-            <a href="#">SHOP</a>
+            <a href="archive">ARCHIVE</a>
+            <a href="shop">SHOP</a>
           </div>
           <div id="nav-social-section" className="nav-section">
             <ul className="social-icons">
@@ -26,16 +28,16 @@ const Navigation = () => {
                 const { id, url, icon } = socials;
                 return (
                   <li key={id}>
-                    <a href={url}>{icon}</a>
+                    <a className="fa-lg" href={url}>
+                      {icon}
+                    </a>
                   </li>
                 );
               })}
             </ul>
           </div>
           <div id="nav-contact-section" className="nav-section">
-            <a className="contact" href="#">
-              GET IN TOUCH
-            </a>
+            <Button className="contact btn">GET IN TOUCH</Button>
           </div>
         </div>
         <button

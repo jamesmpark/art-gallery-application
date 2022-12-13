@@ -5,7 +5,7 @@ import Button from '../Button/Button';
 import './Carousel.css';
 
 const Carousel = () => {
-  const [art, setArt] = useState(artData);
+  const [art] = useState(artData);
   const [index, setIndex] = useState(0);
 
   const handleNextSlide = () => {
@@ -44,7 +44,7 @@ const Carousel = () => {
     return () => {
       window.removeEventListener('keydown', handleUserKeyPress);
     };
-  }, [setArt]);
+  });
 
   // useRef to apply 'active' style on button when using left/right arrow keys
 
@@ -93,10 +93,18 @@ const Carousel = () => {
               <div className="article-nav-section article-section">
                 {/* button group */}
                 <div className="btn-group">
-                  <Button type="prev button" onClick={handlePrevSlide}>
+                  <Button
+                    className="btn prev"
+                    type="navButton"
+                    onClick={handlePrevSlide}
+                  >
                     <FaArrowLeft />
                   </Button>
-                  <Button type="next button" onClick={handleNextSlide}>
+                  <Button
+                    className="btn next"
+                    type="navButton"
+                    onClick={handleNextSlide}
+                  >
                     <FaArrowRight />
                   </Button>
                 </div>

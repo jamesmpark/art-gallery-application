@@ -1,8 +1,13 @@
 import './Button.css';
 
-const Button = ({ children, ...otherProps }) => {
+const BUTTON_TPE_CLASSES = {
+  contact: 'contact',
+  navButtons: 'navButton',
+};
+
+const Button = ({ children, buttonType, ...otherProps }) => {
   return (
-    <button className={`btn`} {...otherProps}>
+    <button className={`btn ${BUTTON_TPE_CLASSES[buttonType]}`} {...otherProps}>
       {children}
     </button>
   );
