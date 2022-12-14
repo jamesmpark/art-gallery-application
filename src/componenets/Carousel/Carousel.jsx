@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { artData } from '../../data';
 import Button from '../Button/Button';
@@ -45,8 +45,6 @@ const Carousel = () => {
       window.removeEventListener('keydown', handleUserKeyPress);
     };
   });
-
-  // useRef to apply 'active' style on button when using left/right arrow keys
 
   // autoplay functionality: after 6s, see the next slide
   // useEffect(() => {

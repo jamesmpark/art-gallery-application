@@ -47,7 +47,7 @@ main > article > .article-section {
   align-items: center;
   justify-content: space-around;
 }
-
+/* overrides btn componenet styling if button type is for navButton */
 button[type='navButton'] {
   min-height: 120px;
   min-width: 120px;

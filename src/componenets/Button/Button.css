@@ -28,6 +28,12 @@
   transform: translate(2px, 2px);
 }
 
+.active {
+  background-color: #40f99cc9;
+  box-shadow: 1.5px 1.5px 0px 1px rgb(0, 0, 0);
+  transform: translate(2px, 2px);
+}
+
 .project-btn {
   margin-right: 15rem;
 }
