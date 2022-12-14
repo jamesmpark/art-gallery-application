@@ -41,12 +41,15 @@ const Carousel = () => {
         setActiveTab('next');
       }
     };
+    const timer = setTimeout(() => {
+      setActiveTab('');
+    }, 300);
     // listens for keydown events and calls handleUserKeyPress function
     window.addEventListener('keydown', handleUserKeyPress);
-    setActiveTab('');
     // clean up function
     return () => {
       window.removeEventListener('keydown', handleUserKeyPress);
+      clearTimeout(timer);
     };
   }, [index]);
 
