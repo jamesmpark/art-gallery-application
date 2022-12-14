@@ -41,6 +41,7 @@ const Carousel = () => {
         setActiveTab('next');
       }
     };
+    // setActiveTab will be '' after .3ms
     const timer = setTimeout(() => {
       setActiveTab('');
     }, 300);
