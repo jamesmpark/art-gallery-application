@@ -1,12 +1,13 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { artData } from '../../data';
 import Button from '../Button/Button';
 import './Carousel.css';
 
 const Carousel = () => {
-  const [art] = useState(artData);
+  const [art, setArt] = useState(artData);
   const [index, setIndex] = useState(0);
+  const [activeTab, setActiveTab] = useState('');
 
   const handleNextSlide = () => {
     setIndex(oldIndex => {
@@ -33,18 +34,21 @@ const Carousel = () => {
     const handleUserKeyPress = e => {
       if (e.key === 'ArrowLeft') {
         handlePrevSlide();
+        setActiveTab('prev');
       }
       if (e.key === 'ArrowRight') {
         handleNextSlide();
+        setActiveTab('next');
       }
     };
     // listens for keydown events and calls handleUserKeyPress function
     window.addEventListener('keydown', handleUserKeyPress);
+    setActiveTab('');
     // clean up function
     return () => {
       window.removeEventListener('keydown', handleUserKeyPress);
     };
-  });
+  }, [index]);
 
   // autoplay functionality: after 6s, see the next slide
   // useEffect(() => {
@@ -77,38 +81,36 @@ const Carousel = () => {
         }
         const { id, image, title, description } = artItem;
         return (
-          <>
-            <article className={position} key={id}>
-              <div className="article-image-section article-section">
-                <img src={image} alt={title} className="art-img" />
+          <article className={position} key={id}>
+            <div className="article-image-section article-section">
+              <img src={image} alt={title} className="art-img" />
+            </div>
+            <div className="article-description-section article-section">
+              <p>{description}</p>
+            </div>
+            <div className="article-title-section article-section">
+              <h1>{title}</h1>
+            </div>
+            <div className="article-nav-section article-section">
+              {/* button group */}
+              <div className="btn-group">
+                <Button
+                  className={activeTab === 'prev' ? 'btn active' : 'btn'}
+                  type="navButton"
+                  onClick={handlePrevSlide}
+                >
+                  <FaArrowLeft />
+                </Button>
+                <Button
+                  className={activeTab === 'next' ? 'btn active' : 'btn'}
+                  type="navButton"
+                  onClick={handleNextSlide}
+                >
+                  <FaArrowRight />
+                </Button>
               </div>
-              <div className="article-description-section article-section">
-                <p>{description}</p>
-              </div>
-              <div className="article-title-section article-section">
-                <h1>{title}</h1>
-              </div>
-              <div className="article-nav-section article-section">
-                {/* button group */}
-                <div className="btn-group">
-                  <Button
-                    className="btn prev"
-                    type="navButton"
-                    onClick={handlePrevSlide}
-                  >
-                    <FaArrowLeft />
-                  </Button>
-                  <Button
-                    className="btn next"
-                    type="navButton"
-                    onClick={handleNextSlide}
-                  >
-                    <FaArrowRight />
-                  </Button>
-                </div>
-              </div>
-            </article>
-          </>
+            </div>
+          </article>
         );
       })}
     </main>

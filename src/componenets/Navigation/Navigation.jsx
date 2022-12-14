@@ -5,7 +5,7 @@ import './Navigation.css';
 
 const Navigation = () => {
   const handleNavToggle = () => {
-    console.log('button');
+    console.log('this is going to be nav toggle');
   };
 
   return (
