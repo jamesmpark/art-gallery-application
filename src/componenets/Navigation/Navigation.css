@@ -96,3 +96,61 @@ nav .nav-section {
     gap: 3rem;
   }
 }
+
+.hamburger {
+  display: none;
+  z-index: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .hamburger {
+    display: block;
+    padding-top: 1.3rem;
+    padding-right: 2rem;
+  }
+
+  #nav-mobile-section {
+    margin: 0;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: -100%;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    transition: 0.3s;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  #nav-link-section,
+  #nav-social-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+  }
+
+  #nav-link-section {
+    flex-basis: 0;
+  }
+
+  #nav-social-section {
+    flex-grow: 0;
+  }
+
+  #nav-contact-section {
+    display: none;
+  }
+  li {
+    padding: 1rem 0;
+  }
+
+  a,
+  span {
+    color: #fff;
+    font-size: 2rem;
+  }
+}

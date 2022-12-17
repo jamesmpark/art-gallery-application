@@ -1,9 +1,15 @@
+import { useState } from 'react';
 import Button from '../Button/Button';
 import { social } from '../../data.js';
 import { Link, Outlet } from 'react-router-dom';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navigation.css';
 
 const Navigation = () => {
+  // hamburger menu state
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+
   const handleNavToggle = () => {
     console.log('this is going to be nav toggle');
   };
@@ -40,14 +46,15 @@ const Navigation = () => {
             <Button className="contact btn">GET IN TOUCH</Button>
           </div>
         </div>
-        <button
-          id="nav-toggle-button"
-          type="button"
-          onClick={handleNavToggle()}
-        >
-          <span>Menu</span>
-          <i className="fa-solid fa-bars"></i>
-        </button>
+
+        {/* hamburger menu */}
+        <div className="hamburger" onClick={handleClick}>
+          {click ? (
+            <FaTimes size={20} style={{ color: '#e2dfdf' }} />
+          ) : (
+            <FaBars size={20} style={{ color: '#000000' }} />
+          )}
+        </div>
       </nav>
       <Outlet />
     </>
