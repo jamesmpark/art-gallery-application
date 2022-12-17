@@ -41,10 +41,10 @@ const Carousel = () => {
         setActiveTab('next');
       }
     };
-    // setActiveTab will be '' after .3ms
+    // setActiveTab will be '' after .35ms
     const timer = setTimeout(() => {
       setActiveTab('');
-    }, 300);
+    }, 350);
     // listens for keydown events and calls handleUserKeyPress function
     window.addEventListener('keydown', handleUserKeyPress);
     // clean up function

@@ -9,9 +9,9 @@ const Modal = ({ open, onClose }) => {
       <div className="modal">
         <div className="overlay"></div>
         <div className="modal-content">
-          <h2>Hello Modal</h2>
+          <h2>Let's talk bzns</h2>
           <FaTimes onClick={onClose} />
-          {/* create form componenet for contact */}
+          {/* create form componenet for contact form */}
         </div>
       </div>
     </>

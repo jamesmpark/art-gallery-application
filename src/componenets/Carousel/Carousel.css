@@ -156,11 +156,11 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
   main > article > .article-description-section {
     order: 3;
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   main > article > .article-description-section > p {
-    width: 55%;
+    width: 65%;
     align-self: center;
   }
   main > article > .article-nav-section {
