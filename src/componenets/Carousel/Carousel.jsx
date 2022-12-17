@@ -29,7 +29,7 @@ const Carousel = () => {
     });
   };
 
-  // Navigation with left/right arrow keys
+  // Navigation with left/right arrow keys (manual dom changes)
   useEffect(() => {
     const handleUserKeyPress = e => {
       if (e.key === 'ArrowLeft') {

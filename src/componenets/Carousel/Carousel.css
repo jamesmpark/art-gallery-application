@@ -136,7 +136,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
 }
 
 /* Screen size at 1200px */
-@media (max-width: 1200px) {
+@media (max-width: 1210px) {
   img {
     width: 65%;
   }

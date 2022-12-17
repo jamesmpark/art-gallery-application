@@ -1,14 +1,17 @@
 import { useState } from 'react';
-import Button from '../Button/Button';
 import { social } from '../../data.js';
 import { Link, Outlet } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Button from '../Button/Button';
+import Modal from '../Modal/Modal.jsx';
 import './Navigation.css';
 
 const Navigation = () => {
   // hamburger menu state
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+  // modal state
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleNavToggle = () => {
     console.log('this is going to be nav toggle');
@@ -43,7 +46,10 @@ const Navigation = () => {
             </ul>
           </div>
           <div id="nav-contact-section" className="nav-section">
-            <Button className="contact btn">GET IN TOUCH</Button>
+            <Button className="contact btn" onClick={() => setIsOpen(true)}>
+              GET IN TOUCH
+            </Button>
+            <Modal open={isOpen} onClose={() => setIsOpen(false)} />
           </div>
         </div>
 
