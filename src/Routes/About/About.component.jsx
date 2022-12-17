@@ -1,4 +1,4 @@
-import Navigation from '../../componenets/Navigation/Navigation';
+import Navigation from '../../componenets/Navigation/Navigation.component';
 import './About.styles.css';
 
 const About = () => {

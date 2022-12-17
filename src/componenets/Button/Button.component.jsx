@@ -1,4 +1,4 @@
-import './Button.css';
+import './Button.styles.css';
 
 const BUTTON_TPE_CLASSES = {
   contact: 'contact',

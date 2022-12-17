@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { social } from '../../data.js';
 import { Link, Outlet } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import Button from '../Button/Button';
-import Modal from '../Modal/Modal.jsx';
-import './Navigation.css';
+import Button from '../Button/Button.component';
+import Modal from '../Modal/Modal.component.jsx';
+import './Navigation.styles.css';
 
 const Navigation = () => {
   // hamburger menu state

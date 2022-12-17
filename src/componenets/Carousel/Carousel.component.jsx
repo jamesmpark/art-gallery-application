@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { artData } from '../../data';
-import Button from '../Button/Button';
-import './Carousel.css';
+import Button from '../Button/Button.component';
+import './Carousel.styles.css';
 
 const Carousel = () => {
   const [art, setArt] = useState(artData);

@@ -1,5 +1,5 @@
 import { FaTimes } from 'react-icons/fa';
-import './Modal.css';
+import './Modal.styles.css';
 
 const Modal = ({ open, onClose }) => {
   // if not open return nothing
