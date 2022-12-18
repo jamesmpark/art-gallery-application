@@ -49,7 +49,11 @@ const Navigation = () => {
             <Button className="contact btn" onClick={() => setIsOpen(true)}>
               GET IN TOUCH
             </Button>
-            <Modal open={isOpen} onClose={() => setIsOpen(false)} />
+            <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+              <h2>Let's talk bzns</h2>
+              <FaTimes onClick={() => setIsOpen(false)} />
+              {/* create form componenet for contact form */}
+            </Modal>
           </div>
         </div>
 

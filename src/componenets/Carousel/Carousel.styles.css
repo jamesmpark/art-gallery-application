@@ -136,7 +136,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
 }
 
 /* Screen size at 1200px */
-@media (max-width: 1210px) {
+@media (max-width: 1211px) {
   img {
     width: 65%;
   }
@@ -188,9 +188,6 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
 }
 
 @media (max-width: 800px) {
-  h1 {
-    font-size: medium;
-  }
   img {
     width: 85%;
   }
