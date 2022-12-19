@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { social } from '../../data.js';
 import { Link, Outlet } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
@@ -10,8 +10,8 @@ const Navigation = () => {
   // hamburger menu state
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
-  // modal state
-  const [isOpen, setIsOpen] = useState(false);
+  // modalRef
+  const modalRef = useRef();
 
   const handleNavToggle = () => {
     console.log('this is going to be nav toggle');
@@ -46,17 +46,25 @@ const Navigation = () => {
             </ul>
           </div>
           <div id="nav-contact-section" className="nav-section">
-            <Button className="contact btn" onClick={() => setIsOpen(true)}>
+            <Button
+              className="contact btn"
+              onClick={() => modalRef.current.open()}
+            >
               GET IN TOUCH
             </Button>
-            <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-              <h2>Let's talk bzns</h2>
-              <FaTimes onClick={() => setIsOpen(false)} />
+            <Modal ref={modalRef}>
+              <div className="modal-header">
+                <h2>Let's talk bzns</h2>
+                <FaTimes />
+              </div>
+              <div>
+                <p>placeholder for the contact form</p>
+              </div>
+
               {/* create form componenet for contact form */}
             </Modal>
           </div>
         </div>
-
         {/* hamburger menu */}
         <div className="hamburger" onClick={handleClick}>
           {click ? (
