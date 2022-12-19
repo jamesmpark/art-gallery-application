@@ -55,12 +55,11 @@ const Navigation = () => {
             <Modal ref={modalRef}>
               <div className="modal-header">
                 <h2>Let's talk bzns</h2>
-                <FaTimes />
+                <FaTimes onClick={() => modalRef.current.close()} />
               </div>
               <div>
-                <p>placeholder for the contact form</p>
+                <p>form placeholder</p>
               </div>
-
               {/* create form componenet for contact form */}
             </Modal>
           </div>

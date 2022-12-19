@@ -13,8 +13,6 @@ const Modal = forwardRef((props, ref) => {
     };
   });
 
-  // // if not open return nothing
-  // if (!isOpen) return null;
   return (
     <AnimatePresence>
       {isOpen && (
@@ -35,8 +33,9 @@ const Modal = forwardRef((props, ref) => {
               delay: 0.4,
             },
           }}
-          onClick={() => setIsOpen(false)}
         >
+          {/* overlay prevents closing modal if the wrapper is clicked */}
+          <div className="overlay" onClick={() => setIsOpen(false)}></div>
           <motion.div
             className="modal-wrapper"
             initial={{
