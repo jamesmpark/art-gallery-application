@@ -5,7 +5,7 @@ import Button from '../Button/Button.component';
 import './Carousel.styles.css';
 
 const Carousel = () => {
-  const [art, setArt] = useState(artData);
+  const [art] = useState(artData);
   const [index, setIndex] = useState(0);
   const [activeTab, setActiveTab] = useState('');
 
@@ -52,23 +52,7 @@ const Carousel = () => {
       window.removeEventListener('keydown', handleUserKeyPress);
       clearTimeout(timer);
     };
-  }, [index]);
-
-  // autoplay functionality: after 6s, see the next slide
-  // useEffect(() => {
-  //   let slider = setInterval(() => {
-  //     setIndex(oldIndex => {
-  //       let index = oldIndex + 1;
-  //       if (index > art.length - 1) {
-  //         index = 0;
-  //       }
-  //       return index;
-  //     });
-  //   }, 6000);
-  //   return () => {
-  //     clearInterval(slider);
-  //   };
-  // }, [index]);
+  });
 
   return (
     <main>

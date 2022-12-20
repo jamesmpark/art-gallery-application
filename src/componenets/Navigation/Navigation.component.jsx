@@ -4,13 +4,14 @@ import { Link, Outlet } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Button from '../Button/Button.component';
 import Modal from '../Modal/Modal.component.jsx';
+import ContactForm from '../Contact-Form/ContactForm.component.jsx';
 import './Navigation.styles.css';
 
 const Navigation = () => {
   // hamburger menu state
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
-  // modalRef
+  // modalRef accesses setIsOpen in Modal componenet
   const modalRef = useRef();
 
   const handleNavToggle = () => {
@@ -57,9 +58,7 @@ const Navigation = () => {
                 <h2>Let's talk bzns</h2>
                 <FaTimes onClick={() => modalRef.current.close()} />
               </div>
-              <div>
-                <p>form placeholder</p>
-              </div>
+              <ContactForm />
               {/* create form componenet for contact form */}
             </Modal>
           </div>

@@ -30,7 +30,8 @@ h2 {
 h3,
 a,
 p,
-span {
+span,
+label {
   font-family: 'Rubik', sans-serif;
   color: rgb(22, 22, 22);
   margin: 0px;

@@ -8,6 +8,7 @@ const Modal = forwardRef((props, ref) => {
 
   useImperativeHandle(ref, () => {
     return {
+      // open and close can now be accessed in Nav component useRef
       open: () => setIsOpen(true),
       close: () => setIsOpen(false),
     };
@@ -34,7 +35,8 @@ const Modal = forwardRef((props, ref) => {
             },
           }}
         >
-          {/* overlay prevents closing modal if the wrapper is clicked */}
+          {/* overlay prevents modal from closing 
+          when modal-wrapper is clicked */}
           <div className="overlay" onClick={() => setIsOpen(false)}></div>
           <motion.div
             className="modal-wrapper"
