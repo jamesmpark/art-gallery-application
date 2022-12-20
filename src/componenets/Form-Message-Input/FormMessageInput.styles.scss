@@ -1,0 +1,22 @@
+$sub-color: grey;
+
+.message {
+  font-family: 'Rubik';
+  color: $sub-color;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  font-family: 'Rubik', sans-serif;
+
+  textarea {
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .form-message {
+    border-radius: 4px;
+    margin: 15px 0;
+    height: 250px;
+  }
+}

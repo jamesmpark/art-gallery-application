@@ -8,8 +8,10 @@ img {
   object-fit: contain;
 }
 
-p {
-  font-family: 'Rubik', sans-serif;
+main {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
 }
 
 main > article {
@@ -41,7 +43,6 @@ main > article > .article-section {
 }
 
 .btn-group {
-  padding-bottom: 7rem;
   width: 100%;
   display: flex;
   align-items: center;

@@ -1,0 +1,19 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+
+  .submit {
+    min-height: 55px;
+    min-width: 130px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .contact-btn-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
