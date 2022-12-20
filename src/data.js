@@ -32,34 +32,34 @@ export const artData = [
     image: 'https://i.imgur.com/MnVbMbo.jpg',
     title: 'Work Faster',
     description:
-      "Employees who work in this type of workplace often juggle multiple projects or tasks at once and are prepared to take on something new with only a moment's notice",
+      "Employees who work in this type of workplace often juggle multiple projects or tasks at once and are prepared to take on something new with only a moment's notice.",
   },
   {
     id: 3,
     image: 'https://i.imgur.com/G9uVFFU.jpg',
     title: 'Capra Aegagrus Hircus',
     description:
-      'The domestic goat (Capra hircus) is a domesticated species of goat-antelope typically kept as livestock.',
+      'Each year, over 6,000 people are traumatized by goats in the United States alone. The majority of goat traumas occur before age eight and after age fifty-two.',
   },
   {
     id: 4,
     image: 'https://i.imgur.com/8H1JNqp.jpg',
-    title: 'Window study',
+    title: 'Window Study',
     description:
-      '5 minute sketch - Mission Distric, San Francisco. Sometime between 2017 - 2019. Originally created with graphite and ink and transfered to digital',
+      '5 minute sketch - Mission Distric, San Francisco. Sometime between 2017 - 2019. Originally created with graphite and ink and transfered to digital.',
   },
   {
     id: 5,
     image: 'https://i.imgur.com/1oR0ExL.jpg',
-    title: 'Posture study',
+    title: 'Posture Study I',
     description:
-      'Fill in the shapes with the right tones and the form takes care of itself - 5 minute ink',
+      'Fill in the shapes with the right tones and the form takes care of itself - 5 minute ink.',
   },
   {
     id: 6,
     image: 'https://i.imgur.com/VA5vrzQ.jpg',
-    title: 'Posture Study',
+    title: 'Posture Study II',
     description:
-      'A head is not drawn until you can feel the unseen side - 3 minute countour sketch practice ',
+      'A head is not drawn until you can feel the unseen side - 3 minute countour sketch practice.',
   },
 ];

@@ -74,10 +74,13 @@ const Carousel = () => {
               <img src={image} alt={title} className="art-img" />
             </div>
             <div className="article-description-section article-section">
-              <p>{description}</p>
+              <p>Medium:</p>
+              <p>Size:</p>
+              <p>Year:</p>
             </div>
             <div className="article-title-section article-section">
-              <h1>{title}</h1>
+              <h1 className="title">{title}</h1>
+              <p className="desc">{description}</p>
             </div>
             <div className="article-nav-section article-section">
               {/* button group */}
