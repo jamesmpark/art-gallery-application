@@ -14,10 +14,6 @@ const Navigation = () => {
   // modalRef accesses setIsOpen in Modal componenet
   const modalRef = useRef();
 
-  const handleNavToggle = () => {
-    console.log('this is going to be nav toggle');
-  };
-
   return (
     <>
       <nav>
@@ -26,11 +22,20 @@ const Navigation = () => {
             <h1 className="logo">James Park</h1>
           </Link>
         </div>
-        <div id="nav-mobile-section">
+        <div
+          id="nav-mobile-section"
+          className={click ? 'nav-menu nav-active' : 'nav-menu'}
+        >
           <div id="nav-link-section" className="nav-section">
-            <a href="about">ABOUT</a>
-            <a href="archive">ARCHIVE</a>
-            <a href="shop">SHOP</a>
+            <a href="about" className="link">
+              ABOUT
+            </a>
+            <a href="archive" className="link">
+              ARCHIVE
+            </a>
+            <a href="shop" className="link">
+              SHOP
+            </a>
           </div>
           <div id="nav-social-section" className="nav-section">
             <ul className="social-icons">
@@ -59,7 +64,6 @@ const Navigation = () => {
                 <FaTimes onClick={() => modalRef.current.close()} />
               </div>
               <ContactForm />
-              {/* create form componenet for contact form */}
             </Modal>
           </div>
         </div>

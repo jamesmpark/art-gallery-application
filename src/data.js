@@ -37,7 +37,7 @@ export const artData = [
   {
     id: 3,
     image: 'https://i.imgur.com/G9uVFFU.jpg',
-    title: 'Capra Aegagrus Hircus',
+    title: 'Domestic Goat',
     description:
       'Each year, over 6,000 people are traumatized by goats in the United States alone. The majority of goat traumas occur before age eight and after age fifty-two.',
   },
@@ -51,14 +51,14 @@ export const artData = [
   {
     id: 5,
     image: 'https://i.imgur.com/1oR0ExL.jpg',
-    title: 'Posture Study I',
+    title: 'Posture I',
     description:
       'Fill in the shapes with the right tones and the form takes care of itself - 5 minute ink.',
   },
   {
     id: 6,
     image: 'https://i.imgur.com/VA5vrzQ.jpg',
-    title: 'Posture Study II',
+    title: 'Posture II',
     description:
       'A head is not drawn until you can feel the unseen side - 3 minute countour sketch practice.',
   },

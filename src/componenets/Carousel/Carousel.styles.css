@@ -100,7 +100,7 @@ main > article > .article-title-section {
 
 .desc {
   padding-top: 1rem;
-  width: 600px;
+  width: 550px;
 }
 
 main > article > .article-title-section > h1 {
@@ -201,7 +201,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
 
 @media (max-width: 800px) {
   img {
-    width: 85%;
+    width: 80%;
   }
   nav {
     justify-content: space-between;

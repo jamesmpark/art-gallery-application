@@ -1,7 +1,7 @@
 .btn {
   font-weight: bold;
   align-items: center;
-  background-color: rgb(238, 238, 238);
+  background-color: #f8fafc;
   border: 3px solid #111;
   border-radius: 8px;
   padding: 8px;
@@ -9,7 +9,6 @@
   min-height: 25px;
   min-width: 100px;
   box-shadow: 5px 5px 0px 1px rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
   font-size: 1rem;
   cursor: pointer;
   text-align: center;

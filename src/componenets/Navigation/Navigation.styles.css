@@ -74,6 +74,7 @@ nav .nav-section {
 }
 
 .hamburger {
+  cursor: pointer;
   display: none;
   z-index: 1;
 }
@@ -81,11 +82,12 @@ nav .nav-section {
 @media screen and (max-width: 800px) {
   .hamburger {
     display: block;
-    padding-top: 1.3rem;
-    padding-right: 2rem;
+    align-self: center;
+    padding: 0 1rem;
+    z-index: 10;
   }
 
-  #nav-mobile-section {
+  .nav-menu {
     margin: 0;
     position: absolute;
     flex-direction: column;
@@ -98,11 +100,20 @@ nav .nav-section {
     height: 100vh;
     transition: 0.3s;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
   }
 
-  #nav-link-section,
-  #nav-social-section {
+  .nav-active {
+    left: 0;
+  }
+
+  .link {
+    color: #f8fafc;
+    font-size: 2rem;
+  }
+
+  #nav-link-section {
+    border-left: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -114,19 +125,11 @@ nav .nav-section {
   }
 
   #nav-social-section {
+    display: none;
     flex-grow: 0;
   }
 
   #nav-contact-section {
     display: none;
-  }
-  li {
-    padding: 1rem 0;
-  }
-
-  a,
-  span {
-    color: rgb(255, 255, 255);
-    font-size: 2rem;
   }
 }
