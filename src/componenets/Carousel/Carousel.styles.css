@@ -99,8 +99,8 @@ main > article > .article-title-section {
 }
 
 .desc {
-  padding-top: 1rem;
-  width: 550px;
+  padding-top: 0.6rem;
+  width: 600px;
 }
 
 main > article > .article-title-section > h1 {
@@ -147,13 +147,13 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
 }
 
-/* Screen size at 1200px */
+/* Screen size at 1211px */
 @media (max-width: 1211px) {
   img {
-    width: 65%;
+    width: 55%;
   }
   main {
-    overflow-y: auto;
+    overflow-y: hidden;
   }
 
   main > article {
@@ -168,11 +168,10 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
   main > article > .article-description-section {
     order: 3;
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   main > article > .article-description-section > p {
-    width: 65%;
     align-self: center;
   }
   main > article > .article-nav-section {
@@ -237,5 +236,79 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
   .btn-group {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  img {
+    object-fit: fill;
+  }
+
+  main > article > .article-image-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  main > article > .article-title-section {
+    width: 375px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  main > article > .article-title-section > h1 {
+    font-size: 1.3rem;
+  }
+
+  main > article > .article-title-section > .desc {
+    width: 280px;
+    font-size: 12px;
+  }
+
+  main > article > .article-description-section > p {
+    font-size: 1rem;
+  }
+
+  main > article > .article-nav-section {
+    display: none;
+  }
+
+  .logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 320px) {
+  img {
+    object-fit: fill;
+  }
+
+  main > article > .article-image-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  main > article > .article-title-section {
+    width: 320px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  main > article > .article-title-section > h1 {
+    font-size: 1.3rem;
+  }
+
+  main > article > .article-title-section > .desc {
+    width: 280px;
+    font-size: 12px;
+  }
+
+  main > article > .article-description-section > p {
+    font-size: 1rem;
+  }
+
+  main > article > .article-nav-section {
+    display: none;
+  }
+
+  .logo {
+    width: 200px;
   }
 }

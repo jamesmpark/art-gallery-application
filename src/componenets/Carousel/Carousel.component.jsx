@@ -67,16 +67,16 @@ const Carousel = () => {
         ) {
           position = 'lastSlide';
         }
-        const { id, image, title, description } = artItem;
+        const { id, image, title, description, medium, size, year } = artItem;
         return (
           <article className={position} key={id}>
             <div className="article-image-section article-section">
               <img src={image} alt={title} className="art-img" />
             </div>
             <div className="article-description-section article-section">
-              <p>Medium:</p>
-              <p>Size:</p>
-              <p>Year:</p>
+              <p>Medium: {medium} </p>
+              <p>Size: {size}</p>
+              <p>Year: {year}</p>
             </div>
             <div className="article-title-section article-section">
               <h1 className="title">{title}</h1>

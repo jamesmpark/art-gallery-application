@@ -86,12 +86,13 @@ nav .nav-section {
     padding: 0 1rem;
     z-index: 10;
   }
-
+  /* nav-menu class keeps toggle to the left */
   .nav-menu {
     margin: 0;
+    padding-top: 15rem;
     position: absolute;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     top: 0;
     left: -100%;
@@ -102,7 +103,7 @@ nav .nav-section {
     z-index: 1;
     background: rgba(0, 0, 0, 0.8);
   }
-
+  /* nav-active animates from left to right*/
   .nav-active {
     left: 0;
   }
@@ -117,7 +118,6 @@ nav .nav-section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    left: 0;
   }
 
   #nav-link-section {
