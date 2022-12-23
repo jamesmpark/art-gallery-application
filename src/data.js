@@ -82,7 +82,7 @@ export const artData = [
   },
   {
     id: 7,
-    image: 'https://imgur.com/CJdqfDl.jpg',
+    image: 'https://i.imgur.com/CJdqfDl.jpg',
     title: 'Macondo',
     description:
       "'Alone, abandoned by his premonitions, fleeing the chill that was to accompany him until death, he sought a last refuge in Macondo in the warmth of his oldest memories.' (Gabriel García Márquez, 100 Years of Solitude) ",

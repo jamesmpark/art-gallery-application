@@ -163,8 +163,16 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
   main > article > .article-title-section {
     order: 2;
+    height: 12rem;
     border-bottom: 1px solid var(--border-color);
-    padding: 1rem 3rem;
+  }
+
+  main > article > .article-title-section > .title {
+    font-size: 35px;
+  }
+
+  main > article > .article-title-section > .desc {
+    font-size: 16px;
   }
   main > article > .article-description-section {
     order: 3;

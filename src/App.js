@@ -4,6 +4,7 @@ import About from './Routes/About/About.component';
 import Archive from './Routes/Archive/Archive.component';
 
 import './App.css';
+import Shop from './Routes/Shop/Shop.componenet';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/archive" element={<Archive />} />
+      <Route path="/shop" element={<Shop />} />
     </Routes>
   );
 }

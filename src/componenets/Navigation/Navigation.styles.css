@@ -101,7 +101,7 @@ nav .nav-section {
     height: 100vh;
     transition: 0.3s;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
   }
   /* nav-active animates from left to right*/
   .nav-active {

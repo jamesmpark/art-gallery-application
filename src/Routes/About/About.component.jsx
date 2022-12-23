@@ -1,5 +1,5 @@
 import Navigation from '../../componenets/Navigation/Navigation.component';
-import './About.styles.css';
+import './About.styles.scss';
 
 const About = () => {
   return (

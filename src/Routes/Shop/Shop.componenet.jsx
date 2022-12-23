@@ -1,15 +1,15 @@
 import Navigation from '../../componenets/Navigation/Navigation.component';
-import './Archive.styles.scss';
+import './Shop.styles.scss';
 
-const Archive = () => {
+const Shop = () => {
   return (
     <>
       <Navigation />
       <div>
-        <h2>I am the archive page</h2>
+        <h2>Shop Page coming soon, just wait a minute</h2>
       </div>
     </>
   );
 };
 
-export default Archive;
+export default Shop;
