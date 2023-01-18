@@ -22,62 +22,63 @@ export const social = [
 export const artData = [
   {
     id: 1,
-    image: 'https://i.imgur.com/3mKZ6xpl.jpg',
-    title: 'Burnout',
+    image: 'https://i.imgur.com/fln8CpD.jpg',
+    title: 'The Self',
     description:
-      'A state of physical or emotional exhaution that also involves a sense of reduced accomplishment and loss of personal identity.',
+      'I have my self-consciousness not in myself but in the other. I am satisfied and have peace with myself only in this other and I AM only because I have peace with myself.',
     medium: 'Digital CMYK',
-    size: '14x14',
-    year: '2022',
+    size: '10x10',
+    year: '2023',
   },
   {
     id: 2,
-    image: 'https://i.imgur.com/MnVbMbo.jpg',
-    title: 'Work',
+    image: 'https://i.imgur.com/KoTIX3r.jpg',
+    title: 'Ghost',
     description:
-      "Employees who work in this type of workplace often juggle multiple projects or tasks at once and are prepared to take on something new with only a moment's notice.",
-    medium: 'Digital CMYK',
-    size: '6.8x6.8',
-    year: '2022',
+      "He'd cry in secret. That made him interesting. It must be nice, having someone care enough to cry for you.",
+    medium: 'Digital Ink',
+    size: '10x10',
+    year: '2023',
   },
   {
     id: 3,
+    image: 'https://i.imgur.com/5I6T8rq.jpg',
+    title: 'King of Diamonds',
+    description:
+      'It was believed that to earn maximum profit, one mustn’t invest in the market they think is best, they must invest in what everyone else thinks is best.',
+    medium: 'Digital',
+    size: '8x8',
+    year: '2023',
+  },
+  {
+    id: 4,
+    image: 'https://i.imgur.com/qptABAq.jpg',
+    title: 'Character Study',
+    description: 'Design of a family of 5',
+    medium: 'Digital',
+    size: '8x8',
+    year: '2023',
+  },
+  {
+    id: 5,
     image: 'https://i.imgur.com/G9uVFFU.jpg',
-    title: 'Domestic Goat',
+    title: 'The Common Goat',
     description:
       'Each year, over 6,000 people are traumatized by goats in the United States alone. The majority of goat traumas occur before age eight and after age fifty-two.',
     medium: 'Digital',
     size: '8x8',
     year: '2022',
   },
+];
+
+export const archiveData = [
   {
-    id: 4,
-    image: 'https://i.imgur.com/8H1JNqp.jpg',
-    title: 'Window Study',
-    description:
-      'A subject for perspective practice. Completed in Mission District, San Francisco.',
-    medium: 'Graphite',
-    size: '8x8',
-    year: '2019',
-  },
-  {
-    id: 5,
-    image: 'https://i.imgur.com/VA5vrzQ.jpg',
-    title: 'Gesture',
-    description:
-      'A three minute sketch for contour practice. Focus on single line strokes and form',
-    medium: 'Graphite',
-    size: '8x8',
-    year: '2022',
-  },
-  {
-    id: 6,
-    image: 'https://i.imgur.com/CJdqfDl.jpg',
-    title: 'Macondo',
-    description:
-      "'Alone, abandoned by his premonitions, fleeing the chill that was to accompany him until death, he sought a last refuge in Macondo in the warmth of his oldest memories.' (Gabriel García Márquez, 100 Years of Solitude) ",
+    id: 1,
+    image: 'https://i.imgur.com/a/6JDOhAd/jpg',
+    title: 'Bear Skull',
+    description: '',
     medium: 'Digital',
-    size: '8x8',
+    size: '8.5x11',
     year: '2022',
   },
 ];

@@ -18,7 +18,9 @@ const Archive = () => {
         <div className="image nine"></div>
         <div className="image ten"></div>
         <div className="image eleven horizontal"></div>
-        <div className="image twelve "></div>
+        <div className="image twelve"></div>
+        <div className="image thirteen"></div>
+        <div className="image fourteen"></div>
       </div>
     </>
   );
