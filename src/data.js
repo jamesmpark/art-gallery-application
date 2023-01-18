@@ -62,18 +62,8 @@ export const artData = [
   },
   {
     id: 5,
-    image: 'https://i.imgur.com/1oR0ExL.jpg',
-    title: 'Posture I',
-    description:
-      'Fill in the shapes with the right tones and the form takes care of itself.',
-    medium: 'Ink',
-    size: '8x8',
-    year: '2022',
-  },
-  {
-    id: 6,
     image: 'https://i.imgur.com/VA5vrzQ.jpg',
-    title: 'Posture II',
+    title: 'Gesture',
     description:
       'A three minute sketch for contour practice. Focus on single line strokes and form',
     medium: 'Graphite',
@@ -81,7 +71,7 @@ export const artData = [
     year: '2022',
   },
   {
-    id: 7,
+    id: 6,
     image: 'https://i.imgur.com/CJdqfDl.jpg',
     title: 'Macondo',
     description:

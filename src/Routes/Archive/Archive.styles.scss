@@ -1,0 +1,88 @@
+.archive-header {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: center;
+}
+
+.image-grid {
+  height: 225vh;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: repeat(6, 1fr);
+  gap: 0.2rem;
+  overflow: auto;
+
+  .image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .vertical {
+    grid-row: span 2;
+  }
+
+  .horizontal {
+    grid-column: span 2;
+  }
+
+  .one {
+    background-image: url('https://imgur.com/fhd3aF6.jpg');
+  }
+  .two {
+    background-image: url('https://imgur.com/fln8CpD.jpg');
+  }
+  .three {
+    background-image: url('https://imgur.com/KoTIX3r.jpg');
+  }
+
+  .four {
+    background-image: url('https://imgur.com/qptABAq.jpg');
+  }
+  .five {
+    background-image: url('https://imgur.com/tw2O6WS.jpg ');
+  }
+  .six {
+    background-image: url('https://imgur.com/zz7Gou5.jpg');
+  }
+  .seven {
+    background-image: url('https://imgur.com/5I6T8rq.jpg');
+  }
+  .eight {
+    background-image: url('https://imgur.com/1oR0ExL.jpg');
+  }
+  .nine {
+    background-image: url('https://imgur.com/nQhLUJQ.jpg');
+  }
+  .ten {
+    background-image: url('https://imgur.com/HYOvT6f.jpg');
+  }
+  .eleven {
+    background-image: url('https://imgur.com/R9p05bM.jpg');
+  }
+  .twelve {
+    background-image: url('https://imgur.com/8JI0Cee.jpg');
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    .horizontal {
+      grid-column: auto / span 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .image-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    .vertical {
+      grid-row: auto / span 1;
+    }
+  }
+}
